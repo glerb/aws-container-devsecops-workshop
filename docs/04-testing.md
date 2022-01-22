@@ -283,6 +283,8 @@ Updating the Pull Request branch automatically triggers the pipeline again.  You
 
 In the feedback you should see information regarding any vulnerabilities that were found in the image.  When you went through the environment setup you specified a vulnerability threshold of **"High"**, which means that the build will fail if an image contains any High or Critical vulnerabilities. Specifying a threshold allows you to put in a place a risk tolerance for different severities of vulnerabilities. This allows your developers to continue to move quickly with low risk vulnerabilities that can be triaged and fixed later on.  In the current setup, all vulnerabilities below the threshold will be pushed to AWS Security Hub.
 
+!!! info "The actual vulnerabilities you see will be more current than the example below, and will require different fixes."
+
 Since the build fails the vulnerability analysis stage we need to fix the issue with so that the image does not contain any **"High"** rated vulnerability.
 
 1.  Go to the <a href="https://us-east-2.console.aws.amazon.com/securityhub/" target="_blank">Security Hub</a> console.
